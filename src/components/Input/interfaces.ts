@@ -1,7 +1,7 @@
 export interface IInput {
-  onChange: (value: string) => void;
-  type: "text" | "password";
   defaultValue?: string;
-  placeholder?: string;
   label?: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  type: "text" | "password";
 }

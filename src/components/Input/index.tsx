@@ -1,17 +1,17 @@
-import React, { useState } from "react"
-import { View } from "react-native"
-import { IInput } from "./interfaces"
-import { EyeIcon, EyeSlashIcon, Label, TextInput, Touchable } from "./styles"
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import { IInput } from './interfaces';
+import { EyeIcon, EyeSlashIcon, Label, TextInput, Touchable } from './styles';
 
 export const Input = (props: IInput) => {
-  const { defaultValue, label, onChange, type, placeholder } = props
-  const [value, setValue] = useState(defaultValue || '')
-  const [showPassword, setShowPassword] = useState(false)
+  const { defaultValue, label, onChange, type, placeholder } = props;
+  const [value, setValue] = useState(defaultValue || '');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleOnChangeText = (str: string) => {
-    setValue(str)
-    onChange(str)
-  }
+    setValue(str);
+    onChange(str);
+  };
 
   return (
     <View>
@@ -19,12 +19,20 @@ export const Input = (props: IInput) => {
       <TextInput
         value={value}
         placeholder={placeholder}
-        secureTextEntry={type === "password" && !showPassword}
+        secureTextEntry={type === 'password' && !showPassword}
         onChangeText={handleOnChangeText}
-        maxLength={type === "password" ? 30 : 1000}
+        maxLength={type === 'password' ? 30 : 1000}
       />
-      {type === "password" && !showPassword && <Touchable onPress={() => setShowPassword(!showPassword)}><EyeIcon /></Touchable>}
-      {type === "password" && showPassword && <Touchable onPress={() => setShowPassword(!showPassword)}><EyeSlashIcon /></Touchable>}
+      {type === 'password' && !showPassword && (
+        <Touchable onPress={() => setShowPassword(!showPassword)}>
+          <EyeIcon />
+        </Touchable>
+      )}
+      {type === 'password' && showPassword && (
+        <Touchable onPress={() => setShowPassword(!showPassword)}>
+          <EyeSlashIcon />
+        </Touchable>
+      )}
     </View>
-  )
-}
+  );
+};

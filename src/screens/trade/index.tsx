@@ -7,4 +7,4 @@ export const TradeScreen = () => {
       <Text>Trade!</Text>
     </View>
   );
-}
+};

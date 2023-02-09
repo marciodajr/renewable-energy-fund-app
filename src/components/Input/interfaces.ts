@@ -3,5 +3,5 @@ export interface IInput {
   label?: string;
   onChange: (value: string) => void;
   placeholder?: string;
-  type: "text" | "password";
+  type: 'text' | 'password';
 }

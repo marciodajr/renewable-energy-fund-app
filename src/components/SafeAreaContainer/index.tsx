@@ -1,2 +1,1 @@
-
-export { Container } from './styles'
+export { Container } from './styles';

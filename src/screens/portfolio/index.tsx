@@ -7,4 +7,4 @@ export const PortfolioScreen = () => {
       <Text>Portfolio!</Text>
     </View>
   );
-}
+};

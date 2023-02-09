@@ -7,4 +7,4 @@ export const SignUpScreen = () => {
       <Text>Login!</Text>
     </View>
   );
-}
+};

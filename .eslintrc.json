@@ -36,6 +36,7 @@
         "usePrettierrc": false
       }
     ],
+    "react/react-in-jsx-scope": "off",
     "indent": [
       "error",
       2

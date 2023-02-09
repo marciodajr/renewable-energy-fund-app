@@ -14,6 +14,7 @@ import {
   Sora_800ExtraBold
 } from '@expo-google-fonts/sora';
 import { SafeAreaView } from 'react-native';
+import { RecoilRoot } from 'recoil';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -43,7 +44,9 @@ export default function App() {
     <React.Fragment>
       <StatusBar style="auto" />
       <SafeAreaView style={{ flex: 1 }}>
-        <Main />
+        <RecoilRoot>
+          <Main />
+        </RecoilRoot>
       </SafeAreaView>
     </React.Fragment>
   );

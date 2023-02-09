@@ -8,34 +8,33 @@ import { HomeScreen, PortfolioScreen, SignInScreen, SignUpScreen, TradeScreen } 
 export const Main = () => {
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
-  const isLoggedIn = false;
+
+  const HomeTabs = () => (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Trade" component={TradeScreen} />
+      <Tab.Screen name="Portfolio" component={PortfolioScreen} />
+    </Tab.Navigator>
+  );
 
   return (
     <NavigationContainer>
-      {isLoggedIn && (
-        <Tab.Navigator>
-          <Tab.Screen name="Home" component={HomeScreen} />
-          <Tab.Screen name="Trade" component={TradeScreen} />
-          <Tab.Screen name="Portfolio" component={PortfolioScreen} />
-        </Tab.Navigator>
-      )}
-      {!isLoggedIn && (
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen name="Login" component={SignInScreen} options={{ headerShown: false }} />
-          <Stack.Screen
-            name="Register"
-            component={SignUpScreen}
-            options={{
-              title: '',
-              headerLeft: () => (
-                <Link to={{ screen: 'Login' }}>
-                  <Ionicons name="arrow-back" size={32} />
-                </Link>
-              )
-            }}
-          />
-        </Stack.Navigator>
-      )}
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Main" component={HomeTabs} />
+        <Stack.Screen name="Login" component={SignInScreen} options={{ headerShown: false }} />
+        <Stack.Screen
+          name="Register"
+          component={SignUpScreen}
+          options={{
+            title: '',
+            headerLeft: () => (
+              <Link to={{ screen: 'Login' }}>
+                <Ionicons name="arrow-back" size={32} />
+              </Link>
+            )
+          }}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

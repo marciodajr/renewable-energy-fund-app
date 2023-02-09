@@ -6,6 +6,6 @@ export interface IButton {
 }
 
 export interface IButtonBase {
-  marginBottom: number;
-  marginTop: number;
+  marginBottom?: number;
+  marginTop?: number;
 }

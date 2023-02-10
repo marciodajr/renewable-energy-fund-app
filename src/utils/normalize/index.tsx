@@ -6,7 +6,7 @@ const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const scaleX = SCREEN_WIDTH / 320;
 const scaleY = SCREEN_HEIGHT / 568;
 
-export function useNormalize(size: number, scale?: 'height') {
+export function normalize(size: number, scale?: 'height') {
   const newSizeX = size * scaleX;
   const newSizeY = size * scaleY;
   if (Platform.OS === 'ios') {

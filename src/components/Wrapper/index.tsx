@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { LayoutChangeEvent, ScrollView, View } from 'react-native';
+import { LayoutChangeEvent, View } from 'react-native';
 import { useNormalize } from '~/hooks/normalize';
 import { IWrapper } from './interfaces';
-import { WrapperBase } from './styles';
+import { ScrollViewBase, WrapperBase } from './styles';
 
 export const Wrapper = (props: IWrapper) => {
   const { children, horizontalCentralized, paddingTop, verticalCentralized } = props;
@@ -16,12 +16,7 @@ export const Wrapper = (props: IWrapper) => {
   };
 
   return (
-    <ScrollView
-      scrollEnabled={scrollEnabled}
-      showsVerticalScrollIndicator={false}
-      keyboardDismissMode="on-drag"
-      style={{ backgroundColor: '#ffffff' }}
-    >
+    <ScrollViewBase scrollEnabled={scrollEnabled} showsVerticalScrollIndicator={false} keyboardDismissMode="on-drag">
       <View onLayout={handleOnLayout}>
         <WrapperBase
           horizontalCentralized={horizontalCentralized}
@@ -31,6 +26,6 @@ export const Wrapper = (props: IWrapper) => {
           {children}
         </WrapperBase>
       </View>
-    </ScrollView>
+    </ScrollViewBase>
   );
 };

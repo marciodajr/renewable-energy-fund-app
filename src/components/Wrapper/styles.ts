@@ -11,3 +11,7 @@ export const WrapperBase = styled.View<IWrapperBase>`
   padding-right: ${useNormalize(20)}px;
   background-color: #ffffff;
 `;
+
+export const ScrollViewBase = styled.ScrollView`
+  background-color: #ffffff;
+`;

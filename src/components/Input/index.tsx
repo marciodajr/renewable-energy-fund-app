@@ -15,7 +15,7 @@ export const Input = (props: IInput) => {
 
   return (
     <View>
-      <Label>{label}</Label>
+      <Label adjustsFontSizeToFit>{label}</Label>
       <TextInput
         value={value}
         placeholder={placeholder}

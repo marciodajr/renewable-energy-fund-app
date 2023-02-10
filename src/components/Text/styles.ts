@@ -9,5 +9,4 @@ export const TextBase = styled.Text<ITextBase>`
   margin-bottom: ${(props) => normalize(props.marginBottom || 0)}px;
   margin-top: ${(props) => normalize(props.marginTop || 0)}px;
   text-align: ${(props) => props.algin || 'left'};
-  width: 100%;
 `;

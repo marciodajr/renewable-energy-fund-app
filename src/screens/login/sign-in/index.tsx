@@ -14,7 +14,7 @@ export const SignInScreen = () => {
   };
 
   return (
-    <Wrapper paddingTop={80}>
+    <Wrapper paddingTop={80} horizontalCentralized>
       <Text algin="center" fontSize={18} fontWeight={600} marginBottom={36} color="#000000">
         Login
       </Text>
@@ -25,7 +25,7 @@ export const SignInScreen = () => {
         <Text algin="center" fontSize={12}>
           Don’t have an account?
         </Text>{' '}
-        <Link algin="center" fontSize={12} onPress={() => linkTo('/Register')}>
+        <Link algin="center" color="#000000" fontSize={12} onPress={() => linkTo('/Register')}>
           Sign up
         </Link>{' '}
         <Text algin="center" fontSize={12}>

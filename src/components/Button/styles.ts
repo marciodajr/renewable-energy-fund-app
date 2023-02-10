@@ -4,7 +4,7 @@ import { IButtonBase } from './interfaces';
 
 export const ButtonBase = styled.TouchableOpacity<IButtonBase>`
   align-items: center;
-  background: #770fdf;
+  background: ${(props) => (!props.disabled ? '#770fdf' : '#A0A0A0')};
   border-radius: ${normalize(4)}px;
   display: flex;
   height: ${normalize(58)}px;

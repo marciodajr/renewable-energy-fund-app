@@ -16,7 +16,11 @@ export const Wrapper = (props: IWrapper) => {
   };
 
   return (
-    <ScrollViewBase scrollEnabled={scrollEnabled} showsVerticalScrollIndicator={false} keyboardDismissMode="on-drag">
+    <ScrollViewBase
+      scrollEnabled={scrollEnabled}
+      showsVerticalScrollIndicator={false}
+      keyboardDismissMode="interactive"
+    >
       <View onLayout={handleOnLayout}>
         <WrapperBase
           horizontalCentralized={horizontalCentralized}

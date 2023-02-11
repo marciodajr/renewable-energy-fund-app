@@ -4,14 +4,14 @@ module.exports = function (api) {
     presets: ['babel-preset-expo'],
     plugins: [
       [
-        "module-resolver",
+        'module-resolver',
         {
           alias: {
             // This needs to be mirrored in tsconfig.json
-            "~": "./src",
-          },
-        },
-      ],
-    ],
+            '~': './src'
+          }
+        }
+      ]
+    ]
   };
 };

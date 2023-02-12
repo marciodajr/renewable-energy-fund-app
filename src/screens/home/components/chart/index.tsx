@@ -40,7 +40,7 @@ export const LineChart = (props: IChart) => {
   }
 
   return (
-    <TouchableOpacity onPress={() => onPress()}>
+    <TouchableOpacity activeOpacity={1} onPress={() => onPress()}>
       <Container marginLeft={marginLeft} marginRight={marginRight}>
         {fundIcon}
         <Text fontWeight={600} fontSize={12} color="#000000" marginTop={7} marginBottom={14}>

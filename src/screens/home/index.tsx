@@ -13,7 +13,7 @@ import {
   TipsRight
 } from './styles';
 import { LineChart } from './components/chart';
-import { ScrollView, TouchableOpacity } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Text } from '~/components/Text';
 import { Wrapper } from '~/components/Wrapper';
 import { naturalData, solarData, windData } from './mocks';

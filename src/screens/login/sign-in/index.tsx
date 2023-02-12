@@ -9,10 +9,6 @@ import { Wrapper } from '~/components/Wrapper';
 export const SignInScreen = () => {
   const linkTo = useLinkTo();
 
-  const handleLogin = () => {
-    linkTo('/Main');
-  };
-
   return (
     <Wrapper paddingTop={80} horizontalCentralized>
       <Text algin="center" fontSize={18} fontWeight={600} marginBottom={36} color="#000000">
@@ -20,12 +16,12 @@ export const SignInScreen = () => {
       </Text>
       <Input label="E-mail" onChange={() => null} placeholder="Email" type="text" />
       <Input onChange={() => null} type="password" label="Password" placeholder="Minimum 8 characters" />
-      <Button label="Login" marginTop={25} onPress={handleLogin} />
+      <Button label="Login" marginTop={25} onPress={() => linkTo('/main')} />
       <Text marginTop={13}>
         <Text algin="center" fontSize={12}>
           Don’t have an account?
         </Text>{' '}
-        <Link algin="center" color="#000000" fontSize={12} onPress={() => linkTo('/Register')}>
+        <Link algin="center" color="#000000" fontSize={12} onPress={() => linkTo('/register')}>
           Sign up
         </Link>{' '}
         <Text algin="center" fontSize={12}>

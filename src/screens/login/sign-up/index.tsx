@@ -44,12 +44,12 @@ export const SignUpScreen = () => {
           </Text>
         </View>
       </TermGroup>
-      <Button disabled={!acceptedTerm} label="Create account" marginTop={25} onPress={() => linkTo('/Login')} />
+      <Button disabled={!acceptedTerm} label="Create account" marginTop={25} onPress={() => linkTo('/login')} />
       <Text marginTop={13}>
         <Text algin="center" fontSize={12}>
           Already have an account?
         </Text>{' '}
-        <Link algin="center" color="#000000" fontSize={12} onPress={() => linkTo('/Login')}>
+        <Link algin="center" color="#000000" fontSize={12} onPress={() => linkTo('/login')}>
           Log in Here
         </Link>
       </Text>

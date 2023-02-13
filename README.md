@@ -1,4 +1,4 @@
-# This React Native project run with Expo
+# React Native project run with Expo
 
 ## Available Scripts
 

@@ -16,6 +16,6 @@ export const ButtonBase = styled.TouchableOpacity<IButtonBase>`
 
 export const ButtonLabel = styled.Text`
   color: #ffffff;
-  font-family: 'Sora-400';
+  font-family: 'Sora-500';
   font-size: ${normalize(16)}px;
 `;

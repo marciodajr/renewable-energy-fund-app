@@ -5,7 +5,7 @@ import { IWrapper } from './interfaces';
 import { ScrollViewBase, WrapperBase } from './styles';
 
 export const Wrapper = (props: IWrapper) => {
-  const { children, horizontalCentralized, paddingTop, verticalCentralized } = props;
+  const { children, horizontalCentralized, paddingTop, paddingBottom, verticalCentralized } = props;
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
   const handleOnLayout = (event: LayoutChangeEvent) => {
@@ -24,6 +24,7 @@ export const Wrapper = (props: IWrapper) => {
       <View onLayout={handleOnLayout}>
         <WrapperBase
           horizontalCentralized={horizontalCentralized}
+          paddingBottom={paddingBottom}
           paddingTop={paddingTop}
           verticalCentralized={verticalCentralized}
         >

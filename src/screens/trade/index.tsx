@@ -122,7 +122,7 @@ export const TradeScreen = () => {
           <Text algin="right" color="#000000" fontSize={24} fontWeight={600}>
             $328.14
           </Text>
-          <Text algin="right" color="#0FDF8F" fontSize={14}>
+          <Text algin="right" fontSize={14}>
             Last purchase 28d ago
           </Text>
         </PortfolioRight>
